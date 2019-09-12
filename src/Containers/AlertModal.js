@@ -11,8 +11,6 @@ import { saveToStorage } from '../Utils'
 import { ModalContainer, TextInfo, TextSuccess, AlertTitle } from '../Components/Styled'
 import { buildNotification } from '../../Firebase'
 
-console.log(buildNotification)
-
 const AlertModal = ({ isModalVisible, toggleModal, flight, selectedDate }) => {
   const handleAlertSetting = async () => {
     if (!!flight.time) {
