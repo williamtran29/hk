@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "886897423055",
+    "firebase_url": "https://flightinfo-a4c59.firebaseio.com",
+    "project_id": "flightinfo-a4c59",
+    "storage_bucket": "flightinfo-a4c59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886897423055:android:c9e51ce33172e9723b3dba",
+        "android_client_info": {
+          "package_name": "com.flightinfo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886897423055-170eu1gc0n67np0rp8kfia2ntccpq96f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDTZ9vAlroZaGiTkKbMagu0R4Rh5-uVO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886897423055-170eu1gc0n67np0rp8kfia2ntccpq96f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
