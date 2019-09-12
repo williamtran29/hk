@@ -19,7 +19,7 @@ target 'FlightInfo' do
     'RCTVibration',
     'RCTWebSocket',
     'RCTLinkingIOS'
-  ]
+  ], :modular_headers => true
   
   pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
@@ -32,7 +32,7 @@ target 'FlightInfo' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
-  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+#  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
 
   pod 'RNDateTimePicker', :path => '../node_modules/@react-native-community/datetimepicker'
 
@@ -40,10 +40,9 @@ target 'FlightInfo' do
 
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
-  pod 'lottie-ios', :path => '../node_modules/lottie-ios'
+#pod 'lottie-ios', :path => '../node_modules/lottie-ios'
 
-  pod 'lottie-react-native', :path => '../node_modules/lottie-react-native'
-
+# pod 'lottie-react-native', :path => '../node_modules/lottie-react-native'
 end
 post_install do |installer|
  installer.pods_project.targets.each do |target|

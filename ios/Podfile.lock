@@ -1,6 +1,6 @@
 PODS:
   - boost-for-react-native (1.63.0)
-  - Crashlytics (3.13.4):
+  - Crashlytics (3.14.0):
     - Fabric (~> 1.10.2)
   - DoubleConversion (1.1.6)
   - Fabric (1.10.2)
@@ -25,7 +25,7 @@ PODS:
   - FirebaseCore (6.0.3):
     - GoogleUtilities/Environment (~> 6.0)
     - GoogleUtilities/Logger (~> 6.0)
-  - FirebaseInstanceID (4.2.3):
+  - FirebaseInstanceID (4.2.5):
     - FirebaseCore (~> 6.0)
     - GoogleUtilities/Environment (~> 6.0)
     - GoogleUtilities/UserDefaults (~> 6.0)
@@ -133,8 +133,6 @@ PODS:
     - React/Core
     - React/fishhook
     - React/RCTBlob
-  - RNCAsyncStorage (1.6.1):
-    - React
   - RNDateTimePicker (2.0.0):
     - React
   - RNFirebase (5.5.6):
@@ -145,6 +143,10 @@ PODS:
     - Crashlytics
     - Fabric
     - Firebase/Core
+    - React
+  - RNGestureHandler (1.4.1):
+    - React
+  - RNReanimated (1.2.0):
     - React
   - RNVectorIcons (6.6.0):
     - React
@@ -172,9 +174,10 @@ DEPENDENCIES:
   - React/RCTText (from `../node_modules/react-native`)
   - React/RCTVibration (from `../node_modules/react-native`)
   - React/RCTWebSocket (from `../node_modules/react-native`)
-  - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - "RNDateTimePicker (from `../node_modules/@react-native-community/datetimepicker`)"
   - RNFirebase (from `../node_modules/react-native-firebase/ios`)
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -203,12 +206,14 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
   React:
     :path: "../node_modules/react-native"
-  RNCAsyncStorage:
-    :path: "../node_modules/@react-native-community/async-storage"
   RNDateTimePicker:
     :path: "../node_modules/@react-native-community/datetimepicker"
   RNFirebase:
     :path: "../node_modules/react-native-firebase/ios"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
   RNVectorIcons:
     :path: "../node_modules/react-native-vector-icons"
   yoga:
@@ -216,14 +221,14 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
-  Crashlytics: 2dfd686bcb918dc10ee0e76f7f853fe42c7bd552
+  Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
   DoubleConversion: bb338842f62ab1d708ceb63ec3d999f0f3d98ecd
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
   FirebaseAnalytics: 470ddab7253b21ad5a40bebd4a9903d7ae19386a
   FirebaseAnalyticsInterop: d48b6ab67bcf016a05e55b71fc39c61c0cb6b7f3
   FirebaseCore: 68f8a7f50cdae542715d4e86afa37c4067217dcb
-  FirebaseInstanceID: 8b42755db950682e7de0d167bc6fb26a57b244af
+  FirebaseInstanceID: 550df9be1f99f751d8fcde3ac342a1e21a0e6c42
   FirebaseMessaging: 6bb0bdaf64c55fef7a219b7bb1e94e94a0855ced
   Folly: de497beb10f102453a1afa9edbf8cf8a251890de
   glog: aefd1eb5dda2ab95ba0938556f34b98e2da3a60d
@@ -232,12 +237,13 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
   React: 1d605e098d69bdf08960787f3446f0a9dc2e2ccf
-  RNCAsyncStorage: e99188b8a89ea0edddc82d8831cd5142f4550fdc
   RNDateTimePicker: 49219e524b0be99b4b0b92717ac691608adae46b
   RNFirebase: ca408d6bee0ca9383bd0cfe84f40b01370b8ad4d
+  RNGestureHandler: 311e3b1cef021a7c9ef31e97e7dc31970cc6288d
+  RNReanimated: 9f7976535c5cde50189acd84751871f5414190b9
   RNVectorIcons: 66af4d5c8ff4f584c7b7cd9c4b0780920f27fce2
   yoga: 128daf064cacaede0c3bb27424b6b4c71052e6cd
 
-PODFILE CHECKSUM: 86bbed26ce46f06af86fa2d3c1ef9be0ba0e7bd1
+PODFILE CHECKSUM: 91770b9092f4c3747d6b8a110ba856f8cc10ed77
 
 COCOAPODS: 1.5.3

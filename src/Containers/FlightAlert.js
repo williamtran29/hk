@@ -25,7 +25,7 @@ const FlightAlert = () => {
       setData(flightAlert)
     }
     fetchData()
-  }, [])
+  }) 
   return (
     <View style={{ flex: 1 }}>
         <FlatList
