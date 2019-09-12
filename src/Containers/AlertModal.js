@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View } from 'react-native'
+import { Alert, View } from 'react-native'
 import { Text } from 'react-native-elements'
 import Firebase from "react-native-firebase"
 import { Button, Card, Divider } from 'react-native-elements'
@@ -14,16 +14,16 @@ import { buildNotification } from '../../Firebase'
 console.log(buildNotification)
 
 const AlertModal = ({ isModalVisible, toggleModal, flight, selectedDate }) => {
-  const [isComplete, setIsComplete] = useState(false)  
   const handleAlertSetting = async () => {
     if (!!flight.time) {
       const arriveTime = moment(`${moment(selectedDate).format('YYYY-MM-DD')} ${flight.time}`)
                         .subtract(30, "minutes")
-      const testTime = moment(new Date()).add(1, "minutes")
       Firebase.notifications().scheduleNotification(buildNotification(flight), {
-         fireDate: testTime.valueOf()
+         fireDate: arriveTime.valueOf()
       });
-      setIsComplete(!isComplete)
+      Alert.alert(
+        'Set alert/notification for the flight successfully!'
+      )
     }
     await saveToStorage('@flight_alerts', flight)
   }
@@ -40,18 +40,13 @@ const AlertModal = ({ isModalVisible, toggleModal, flight, selectedDate }) => {
             <TextInfo>30 minutes before arriving</TextInfo> 
           </View>
           <View>
-            {isComplete && 
-              <TextSuccess>Set alert/notification for the flight successfully!</TextSuccess>
-            }
-            {!isComplete &&
-              <Button
+            <Button
                 icon={<Icon name='bell' color='#ffffff' />}
                 buttonStyle={{ marginTop: 10, backgroundColor: Colors.main }}
                 titleStyle={{ padding: 10 }}
                 title='Set Alert'
                 onPress={handleAlertSetting}
-              />
-            }
+            />
             <Button
               title="Close"
               onPress={toggleModal}
